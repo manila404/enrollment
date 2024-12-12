@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,11 +18,15 @@ Route::get('/dashboard', function () {
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified','admin'])->name('admin.dashboard');
+// Admin: List users
+Route::get('/admin/users', [AdminController::class, 'users'])->middleware(['auth', 'verified', 'admin'])->name('admin.users');
+
 
 //Registrar
 Route::get('/registrar/dashboard', function () {
     return view('registrar.dashboard');
 })->middleware(['auth', 'verified', 'registrar'])->name('registrar.dashboard');
+
 
 //Department
 Route::get('/department/dashboard', function () {
