@@ -27,6 +27,8 @@
    ```
    php artisan migrate
    ```
+   php artisan db:seed
+   ```
 
    run both command in different terminal:
    ```
