@@ -27,11 +27,24 @@ Route::get('/registrar/dashboard', function () {
     return view('registrar.dashboard');
 })->middleware(['auth', 'verified', 'registrar'])->name('registrar.dashboard');
 
+// Department Routes
+Route::middleware(['auth', 'verified', 'department'])->prefix('department')->name('department.')->group(function () {
+    // Dashboard route
+    Route::get('/dashboard', function () {
+        return view('department.dashboard');
+    })->name('dashboard');
 
-//Department
-Route::get('/department/dashboard', function () {
-    return view('department.dashboard');
-})->middleware(['auth', 'verified', 'department'])->name('department.dashboard');
+    // Instructors route
+    Route::get('/instructors', function () {
+        return view('department.instructors');
+    })->name('instructors');
+
+    // Courses route
+    Route::get('/courses', function () {
+        return view('department.courses');
+    })->name('courses');
+});
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
