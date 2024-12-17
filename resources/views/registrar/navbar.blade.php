@@ -25,7 +25,7 @@
                 <!-- Navbar Links with Icons -->
                 <ul class="space-y-8">
 
-                    <a href="{{ route(name: 'admin.dashboard') }}">
+                    <a href="{{ route(name: 'registrar.dashboard') }}">
                         <li class="flex flex-col items-center group mb-8">
                             <img src="{{ asset('assets/dashboard.svg') }}" alt="Bacoor Logo"
                                 class="h-icon w-icon ml-4 mr-4 group-hover:scale-110 transition-transform duration-200 ease-in-out">
@@ -34,12 +34,12 @@
                         </li>
                     </a>
 
-                    <a href="{{ route('admin.users') }}">
+                    <a href="{{ route('registrar.courses') }}">
                         <li class="flex flex-col items-center group mb-8">
                             <img src="{{ asset('assets/users.svg') }}" alt="Bacoor Logo"
                                 class="h-icon w-icon ml-4 mr-4 group-hover:scale-110 transition-transform duration-200 ease-in-out">
                             <span
-                                class="text-xs mt-1 text-center font-semibold font-poppins group-hover:scale-125 transition-all duration-200 ease-in-out">Users</span>
+                                class="text-xs mt-1 text-center font-semibold font-poppins group-hover:scale-125 transition-all duration-200 ease-in-out">Courses</span>
                         </li>
                     </a>
                 </ul>
@@ -68,7 +68,7 @@
 
             <!-- Header Part -->
             <header class="bg-light-gray shadow-big p-4">
-                <h1 class="text-2xl font-bold">Hello [Username]</h1>
+                <h1 class="text-2xl font-bold">Hello  <span id="username">{{ Auth::user()->name }}</span> </h1>
             </header>
 
             <!-- Area Where Main Content will be Called -->

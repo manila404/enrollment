@@ -22,10 +22,23 @@ Route::get('/admin/dashboard', function () {
 Route::get('/admin/users', [AdminController::class, 'users'])->middleware(['auth', 'verified', 'admin'])->name('admin.users');
 
 
-//Registrar
-Route::get('/registrar/dashboard', function () {
-    return view('registrar.dashboard');
-})->middleware(['auth', 'verified', 'registrar'])->name('registrar.dashboard');
+// //Registrar
+// Route::get('/registrar/dashboard', function () {
+//     return view('registrar.dashboard');
+// })->middleware(['auth', 'verified', 'registrar'])->name('registrar.dashboard');
+// Registrar Routes
+Route::middleware(['auth', 'verified', 'registrar'])->prefix('registrar')->name('registrar.')->group(function () {
+    // Dashboard route
+    Route::get('/dashboard', function () {
+        return view('registrar.dashboard');
+    })->name('dashboard');
+
+    // Courses route
+    Route::get('/courses', function () {
+        return view('registrar.courses');
+    })->name('courses');
+
+});
 
 // Department Routes
 Route::middleware(['auth', 'verified', 'department'])->prefix('department')->name('department.')->group(function () {

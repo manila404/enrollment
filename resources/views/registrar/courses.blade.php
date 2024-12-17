@@ -1,4 +1,4 @@
-@extends('layouts.department.navbar')
+@extends('registrar.navbar')
 
 
 @section('content')

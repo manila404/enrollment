@@ -68,7 +68,7 @@
 
             <!-- Header Part -->
             <header class="bg-light-gray shadow-big p-4">
-                <h1 class="text-2xl font-bold">Hello [Username]</h1>
+                <h1 class="text-2xl font-bold">Hello  <span id="username">{{ Auth::user()->name }}</span> </h1>
             </header>
 
             <!-- Area Where Main Content will be Called -->
