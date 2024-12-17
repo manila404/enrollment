@@ -12,11 +12,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('courses', function (Blueprint $table) {
-            $table->id();
-            $table->string('course_id')->unique();
+            $table->string('course_id')->primary(); // Set as primary key
             $table->string('description');
             $table->integer('credit_units');
-            $table->string('department');
+            $table->boolean('IT_dpt')->default(false); /* IT Department - check or uncheck */
+            $table->boolean('CS_dpt')->default(false); /* CS Department - check or uncheck */
             $table->timestamps();
         });
     }
@@ -25,5 +25,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('courses');
     }
-
 };
