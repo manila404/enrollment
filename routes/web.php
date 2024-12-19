@@ -38,6 +38,11 @@ Route::middleware(['auth', 'verified', 'registrar'])->prefix('registrar')->name(
         return view('registrar.courses');
     })->name('courses');
 
+    // Students route
+    Route::get('/students', function () {
+        return view('registrar.students');
+    })->name('students');
+
 });
 
 // Department Routes

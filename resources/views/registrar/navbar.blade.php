@@ -42,6 +42,15 @@
                                 class="text-xs mt-1 text-center font-semibold font-poppins group-hover:scale-125 transition-all duration-200 ease-in-out">Courses</span>
                         </li>
                     </a>
+
+                    <a href="{{ route('registrar.students') }}">
+                        <li class="flex flex-col items-center group mb-8">
+                            <img src="{{ asset('assets/users.svg') }}" alt="Bacoor Logo"
+                                class="h-icon w-icon ml-4 mr-4 group-hover:scale-110 transition-transform duration-200 ease-in-out">
+                            <span
+                                class="text-xs mt-1 text-center font-semibold font-poppins group-hover:scale-125 transition-all duration-200 ease-in-out">Students</span>
+                        </li>
+                    </a>
                 </ul>
             </div>
 
