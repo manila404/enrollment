@@ -7,36 +7,46 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-1. clone this repository (https://github.com/RON2814/enrollment-system.git)
-2. open Visual Studio Code (VS Code)
-3. open/navigate to the cloned repository
-4. open the terminal
-5. run these command:
-   ```
-   composer install
-   npm install
-   ```
-   this will take a while just wait.
-   
-   ```
-   cp .env.example .env
-   ```
-   ```
-   php artisan key:generate
-   ```
-   ```
-   php artisan migrate
-   ```
-   php artisan db:seed
-   ```
+---------------------
 
-   run both command in different terminal:
-   ```
-   php artisan serve
-   npm run dev
-   ```
-   Now, you can access the application at `http://localhost:8000`.
+## Install necessary resources before running:
 
+# INSTALLING LARAVEL GUIDE#
+    Laravel Guide : https://laravel.com/docs/11.x/installation  
+    Youtube Guide for laravel installation : https://www.youtube.com/watch?v=2qgS_MCvDfk  
+    Youtube Guide for Laravel/breeze installation : https://www.youtube.com/watch?v=Et068bVFstY 
+
+# INSTALLATION LINKS for PHP, XAMPP, Composer, Node.js :  
+    XAMPP - https://www.apachefriends.org/download.html  
+    PHP - https://www.php.net/downloads.php  
+    Composer - https://getcomposer.org/download/  
+    Node.js - https://nodejs.org/en 
+
+## CLONING REPOSITORY 
+
+1. open Visual Studio Code (VS Code)
+2. open/navigate to the cloned repository
+3. open the terminal
+4. run these command:
+    ```
+    composer install
+    ```
+    npm install
+    ```
+    cp .env.example .env
+    ```
+    php artisan key:generate
+    ```
+    php artisan migrate
+    ```
+    php artisan db:seed
+    ```
+# Open new terminal and run this command:
+    npm run dev
+# Open another new terminal and run this command & click the provided host link:
+    php artisan serve
+
+----------------------------
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
